@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width= , initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <header>
+      <div id="logo">
+        <span>Shop Pods</span>
+      </div>
+      <div id="about">
+        <a href="#" title="AirPods" onclick="slowScroll('#main')">AirPods</a>
+        <a href="#" title="iPhone" onclick="slowScroll('#main')">iPhone</a>
+        <a href="#" title="MacBook" onclick="slowScroll('#main')">MacBook</a>
+        <a href="#" title="Apple Watch" onclick="slowScroll('#main')">Apple Watch</a
+        >
+      </div>
+    </header>
+<div id="top">
+  <h1>Скупка</h1>
+  <H3>Продажа</H3>
+</div>
+<div id="main">
+  <div class="intro">
+    <h2>Наши услуги помогут Вам!</h2>
+    <span> Большой выбор устройств и не только</span>
+  </div>
+</div>
+<div id="overview">
+  <h2>Приемущества </h2>
+  <h4>С нами все проще</h4>
+  <div class="img">
+    <img src="https://placehold.it/200x100" alt="AirPods">
+    <span>AirPods</span>
+  </div>
+  <div class="img">
+    <img src="https://placehold.it/200x100" alt="iPhone">
+    <span>iPhone</span>
+  </div>
+  <div class="img">
+    <img src="https://placehold.it/200x100" alt="iPad">
+    <span>iPad</span>
+  </div>
+  <div class="img">
+    <img src="https://placehold.it/200x100" alt="MacBook">
+    <span>MacBook</span>
+  </div>
+</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      function slowScroll(id) {
+        $("html, body").animate(
+          {
+            scroltTop: $(id).offset,
+          },
+          500
+        );
+      }
+
+      $(document).on("scroll", function () {
+        if ($(window).scrollTop() === 0) 
+          $("header").removeClass("fixed");
+        else 
+          $("header").attr("class", "fixed");
+      });
+    </script>
+  </body>
+</html>
